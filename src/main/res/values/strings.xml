@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Zapirapi</string>
+
+    <string-array name="categorias_calzado">
+        <item>Todas las Categorías</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+
+    </string-array>
+
+    <string-array name="tallas_calzado">
+        <item>Seleccionar Talla</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+    </string-array>
+
+    <string-array name="colores_calzado">
+        <item>Seleccionar Color</item>
+        <item>Negro</item>
+        <item>Blanco</item>
+        <item>Café</item>
+        <item>Rojo</item>
+        <item>Azul</item>
+    </string-array>
+</resources>

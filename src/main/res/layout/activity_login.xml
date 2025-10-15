@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center_horizontal"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RAPI ZAPI"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:textColor="#3F51B5"/> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Inicio de Sesión"
+    android:textSize="20sp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="40dp"/>
+
+    <EditText
+        android:id="@+id/edit_text_correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/edit_text_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/button_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTRAR"
+        android:padding="15dp"
+        android:backgroundTint="#FF9800"/> <TextView
+    android:id="@+id/text_view_registrarte"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="¿No tienes cuenta? Regístrate aquí"
+    android:textColor="#3F51B5"
+    android:layout_marginTop="24dp"
+    android:clickable="true"
+    android:focusable="true"/>
+
+</LinearLayout>

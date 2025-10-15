@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".ArticuloAnadidosActivity">
+
+    <TextView
+        android:id="@+id/tv_title_carrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ARTÍCULOS AÑADIDOS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:elevation="4dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_carrito"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title_carrito"
+        android:layout_above="@id/layout_resumen"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+    <LinearLayout
+        android:id="@+id/layout_resumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resumen del Pedido"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Subtotal:"/>
+            <TextView
+                android:id="@+id/tv_subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Envío:"/>
+            <TextView
+                android:id="@+id/tv_envio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$15.00"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TOTAL:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+            <TextView
+                android:id="@+id/tv_total_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$15.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_finalizar_compra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REALIZAR COMPRA"
+            android:backgroundTint="#FF5722"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

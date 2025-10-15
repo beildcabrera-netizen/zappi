@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:padding="16dp"
+    tools:context=".RealizarCompraActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tv_title_compra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FINALIZAR COMPRA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:elevation="4dp" />
+
+    <!-- Formulario dentro de ScrollView -->
+    <ScrollView
+        android:id="@+id/scroll_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_compra"
+        android:layout_above="@id/layout_total_compra"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/form_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teléfono:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/et_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:backgroundTint="#FF5722"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/et_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:backgroundTint="#FF5722"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Método de Pago:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinner_metodo_pago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF5722"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_enviar_compra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ENVIAR COMPRA"
+                android:backgroundTint="#FF5722"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Total -->
+    <LinearLayout
+        android:id="@+id/layout_total_compra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TOTAL:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tv_total_compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800" />
+    </LinearLayout>
+</RelativeLayout>
+
